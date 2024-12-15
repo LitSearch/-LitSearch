@@ -1,1 +1,1 @@
-# -LitSearch
+# LitSearch
