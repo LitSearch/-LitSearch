@@ -1,3 +1,17 @@
 spring:
   application:
-  name: litsearch
+    name: litsearch
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DB_HOST}:3306/${DB_NAME}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  hibernate:
+    search:
+      backend:
+        default:
+          type: lucene
+          directory:
+            root: /path/to/lucene/indexes
