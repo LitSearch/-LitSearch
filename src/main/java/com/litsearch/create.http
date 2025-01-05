@@ -1,0 +1,12 @@
+POST http://localhost:8080/api/cll-sll/documents
+Content-Type: application/json
+
+{
+  "title": "Getting Started with Elasticsearch",
+  "url": "https://localhost:8080/elasticsearch-guide",
+  "abstractText": "A beginner's guide to Elasticsearch fundamentals.",
+  "bodyText": "This document provides a detailed introduction to Elasticsearch, its architecture, and usage.",
+  "bodyHtml": "<p>This document provides a detailed introduction to <strong>Elasticsearch</strong>, its architecture, and usage.</p>"
+}
+
+
