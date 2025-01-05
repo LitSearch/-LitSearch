@@ -1,3 +1,32 @@
 spring:
   application:
-  name: litsearch
+    name: litsearch
+
+  # 서버 설정 (선택 사항)
+  server:
+    port: 8080
+    servlet:
+      context-path: /api
+
+
+  # JPA 설정
+  jpa:
+    hibernate:
+      ddl-auto: update  # 스키마 자동 업데이트
+    show-sql: true       # SQL 쿼리 출력
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect  # MySQL 8.x Dialect 사용
+
+  # 데이터베이스 설정
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306
+    username: root
+    password:
+  # Elasticsearch 설정
+elastic:
+  hostname: ${ELASTICSEARCH_HOSTNAME}  # 환경 변수에서 Elasticsearch 호스트네임 로드
+  username: ${ELASTICSEARCH_USERNAME}  # 환경 변수에서 Elasticsearch 사용자명 로드
+  password: ${ELASTICSEARCH_PASSWORD}  # 환경 변수에서 Elasticsearch 비밀번호 로드
